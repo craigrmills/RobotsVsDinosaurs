@@ -50,10 +50,16 @@ class Battlefield:
         return first_turn
 
     def dino_turn(self):
-        self.herd.dinosaurs[0].attack(self.fleet.robots[0])
+        if self.herd.dinosaurs[0].health > 0:
+            self.herd.dinosaurs[0].attack(self.fleet.robots[0])
+        else:
+            pass
 
     def robo_turn(self):
-        self.fleet.robots[0].attack(self.herd.dinosaurs[0])
+        if self.fleet.robots[0].health > 0:
+            self.fleet.robots[0].attack(self.herd.dinosaurs[0])
+        else:
+            pass
 
     def show_dino_opponent_options(self):
         pass

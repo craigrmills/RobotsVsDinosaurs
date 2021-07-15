@@ -1,4 +1,5 @@
 from dinosaur import Dinosaur
+import random
 
 
 class Herd:
@@ -10,7 +11,8 @@ class Herd:
         i = 0
         dinosaurs = []
         dinosaur_names = ["Long-neck", "Trihorn", "Sharp-Tooth"]
-        damage_of_dinosaurs = [15, 25, 35]
+        damage_of_dinosaurs = [random.randrange(
+            5, 15), random.randrange(10, 25), random.randrange(15, 35)]
         while i < 3:
             name = dinosaur_names[i]
             dino_damage = damage_of_dinosaurs[i]
