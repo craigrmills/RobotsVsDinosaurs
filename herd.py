@@ -1,7 +1,7 @@
 from dinosaur import Dinosaur
 
 
-class Heard:
+class Herd:
 
     def __init__(self):
         self.dinosaurs = []
