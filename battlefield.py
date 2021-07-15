@@ -22,8 +22,10 @@ class Battlefield:
         while game_state:
             if first_turn == 1:
                 self.robo_turn()
+                self.dino_turn()
             else:
                 self.dino_turn()
+                self.robo_turn()
             if self.fleet.robots[0].health <= 0:
                 print(self.fleet.robots[0].name + " has exploded!")
                 self.fleet.robots.remove(self.fleet.robots[0])
