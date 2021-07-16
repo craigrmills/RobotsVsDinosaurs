@@ -27,22 +27,22 @@ class Battlefield:
                 self.dino_turn()
                 self.robo_turn()
             if self.fleet.robots[0].health <= 0:
-                print(self.fleet.robots[0].name + " has exploded!")
+                print(self.fleet.robots[0].name + " has exploded!\n")
                 self.fleet.robots.remove(self.fleet.robots[0])
             if self.herd.dinosaurs[0].health <= 0:
-                print(self.herd.dinosaurs[0].name + " has met it's end!")
+                print(self.herd.dinosaurs[0].name + " has met it's end!\n")
                 self.herd.dinosaurs.remove(self.herd.dinosaurs[0])
             if len(self.fleet.robots) < 1:
-                winner = "Dinosaurs have Prevailed!"
+                winner = "Dinosaurs have Prevailed!\n"
                 game_state = False
             if len(self.herd.dinosaurs) < 1:
-                winner = "Robots have Conquered all!"
+                winner = "Robots have Conquered all!\n"
                 game_state = False
         self.display_winners(winner)
 
     def display_welcome(self):
-        print("Welcome to Robots Vs Dinosaurs!\n Enjoy the Fight!\n")
-        first_turn = random.randrange(1, 2)
+        print("\nWelcome to Robots Vs Dinosaurs!\n Enjoy the Fight!\n")
+        first_turn = random.randrange(2)
         if first_turn == 1:
             print("The Robots have won the coin toss and shall go first.\n")
         else:
